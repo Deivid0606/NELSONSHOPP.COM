@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Premium Pro | Diseño Elegante</title>
+    <title>CATÁLOGO SHOPNELSON | Diseño Elegante</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --primary-dark: #1a252f;
-            --secondary: #3498db;
-            --accent: #25D366;
-            --accent-dark: #128C7E;
+            /* ✅ NUEVA PALETA DE COLORES COMBINANDO CON EL LOGO */
+            --primary: #1e3a8a;      /* Azul marino del logo */
+            --primary-dark: #0f172a; /* Azul más oscuro */
+            --secondary: #3b82f6;    /* Azul eléctrico */
+            --accent: #f97316;       /* Naranja del logo */
+            --accent-dark: #ea580c;  /* Naranja más oscuro */
+
+            /* Resto igual */
             --danger: #e74c3c;
             --success: #2ecc71;
             --warning: #f39c12;
@@ -26,7 +29,7 @@
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
             --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            --gradient-secondary: linear-gradient(135deg, var(--secondary), #2980b9);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary), #1d4ed8);
         }
 
         * {
@@ -86,9 +89,30 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .header-content h1 i {
-            color: var(--warning);
-            margin-right: 15px;
+        /* ✅ LOGO MÁS GRANDE Y ELEGANTE */
+        .brand-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .brand-logo {
+            height: 90px; /* ✅ MÁS GRANDE */
+            max-width: 220px; /* ✅ MÁS ANCHO */
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 12px;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            transition: var(--transition);
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.25);
         }
 
         .header-content .tagline {
@@ -125,7 +149,7 @@
         }
 
         .stat-item i {
-            color: var(--warning);
+            color: var(--accent); /* ✅ AHORA NARANJA */
             font-size: 1.2rem;
         }
 
@@ -157,7 +181,7 @@
         .search-elegant input:focus {
             outline: none;
             border-color: var(--secondary);
-            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
             background: white;
         }
 
@@ -201,7 +225,7 @@
             background: var(--gradient-secondary);
             color: white;
             border-color: var(--secondary);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
         }
 
         .product-counter {
@@ -308,7 +332,7 @@
         }
 
         .share-btn-elegant:hover {
-            background: var(--secondary);
+            background: var(--accent);
             color: white;
             transform: scale(1.15) rotate(15deg);
         }
@@ -364,7 +388,7 @@
             border: none;
             border-radius: var(--radius-sm);
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
             position: relative;
             overflow: hidden;
             transition: var(--transition);
@@ -389,7 +413,7 @@
 
         .btn-whatsapp-pro:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 12px 35px rgba(249, 115, 22, 0.6);
             background: linear-gradient(135deg, #128C7E, #075E54, #128C7E);
         }
 
@@ -412,8 +436,8 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.8); }
+            0%, 100% { box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4); }
+            50% { box-shadow: 0 8px 30px rgba(249, 115, 22, 0.8); }
         }
 
         .btn-whatsapp-pro {
@@ -578,7 +602,7 @@
             color: var(--primary);
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 2px solid var(--secondary);
+            border-bottom: 2px solid var(--accent); /* ✅ AHORA NARANJA */
             font-size: 1.4rem;
             display: flex;
             align-items: center;
@@ -586,7 +610,7 @@
         }
 
         .form-section h3 i {
-            color: var(--secondary);
+            color: var(--accent); /* ✅ AHORA NARANJA */
         }
 
         .form-grid {
@@ -621,7 +645,7 @@
         .form-control-elegant:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
             background: white;
         }
 
@@ -667,7 +691,7 @@
             background: var(--gradient-accent);
             color: white;
             border-color: var(--accent);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
         }
 
         /* RESUMEN DE COMPRA ELEGANTE */
@@ -725,7 +749,7 @@
 
         .back-to-catalog:hover {
             transform: translateX(-5px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
         }
 
         .landing-product-card {
@@ -833,12 +857,12 @@
         .feature-card:hover {
             border-color: var(--secondary);
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.1);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
         }
 
         .feature-card i {
             font-size: 2rem;
-            color: var(--secondary);
+            color: var(--accent); /* ✅ AHORA NARANJA */
             margin-bottom: 15px;
         }
 
@@ -876,7 +900,7 @@
             position: absolute;
             top: -5px;
             right: -5px;
-            background: var(--danger);
+            background: var(--accent); /* ✅ AHORA NARANJA */
             color: white;
             border-radius: 50%;
             width: 24px;
@@ -900,7 +924,7 @@
             border: none;
             border-radius: var(--radius);
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
             position: relative;
             overflow: hidden;
             transition: var(--transition);
@@ -926,7 +950,7 @@
 
         .btn-whatsapp-giant:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 20px 50px rgba(249, 115, 22, 0.6);
             background: linear-gradient(135deg, #128C7E, #075E54, #128C7E);
         }
 
@@ -949,8 +973,8 @@
         }
 
         @keyframes giant-pulse {
-            0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 10px 45px rgba(37, 211, 102, 0.8); }
+            0%, 100% { box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4); }
+            50% { box-shadow: 0 10px 45px rgba(249, 115, 22, 0.8); }
         }
 
         .btn-whatsapp-giant {
@@ -966,12 +990,12 @@
             .products-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
-            
+
             .landing-product-header {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .landing-title {
                 font-size: 2rem;
             }
@@ -981,35 +1005,40 @@
             .container {
                 padding: 15px;
             }
-            
+
             .header-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
-            
+
+            .brand-logo {
+                height: 80px;
+                max-width: 200px;
+            }
+
             .header-content {
                 padding: 40px 20px;
             }
-            
+
             .stat-item {
                 padding: 10px 20px;
             }
-            
+
             .modal-content-elegant {
                 padding: 0;
             }
-            
+
             .modal-header {
                 padding: 20px;
             }
-            
+
             .modal-body {
                 padding: 20px;
             }
-            
+
             .form-section {
                 padding: 20px;
             }
-            
+
             .cart-floating {
                 bottom: 20px;
                 right: 20px;
@@ -1020,37 +1049,42 @@
             .products-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .header-content h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
-            
+
+            .brand-logo {
+                height: 70px;
+                max-width: 180px;
+            }
+
             .header-stats {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
-            
+
             .filter-chip {
                 padding: 8px 18px;
             }
-            
+
             .landing-product-header {
                 padding: 20px;
             }
-            
+
             .landing-title {
                 font-size: 1.8rem;
             }
-            
+
             .landing-price {
                 font-size: 2.5rem;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .form-grid {
                 grid-template-columns: 1fr;
             }
@@ -1072,9 +1106,18 @@
             <!-- Header elegante -->
             <header class="hero-header">
                 <div class="header-content">
-                    <h1><i class="fas fa-crown"></i> Catálogo Premium Pro</h1>
+                    <!-- ✅ LOGO SHOPNELSON MÁS GRANDE Y ELEGANTE -->
+                    <div class="brand-title">
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/0707/1979/9484/files/Captura_de_pantalla_2026-02-04_010956.jpg?v=1770178225"
+                            alt="SHOPNELSON Logo"
+                            class="brand-logo"
+                        >
+                        <h1>CATÁLOGO SHOPNELSON</h1>
+                    </div>
+
                     <p class="tagline">Productos de calidad superior con entregas rápidas y atención personalizada 24/7</p>
-                    
+
                     <div class="header-stats">
                         <div class="stat-item">
                             <i class="fas fa-star"></i>
@@ -1102,7 +1145,7 @@
                     <input type="text" id="searchInput" placeholder="Buscar productos por nombre, SKU o descripción...">
                     <i class="fas fa-search"></i>
                 </div>
-                
+
                 <div class="filters-elegant">
                     <div class="filter-chip active" data-filter="all">
                         <i class="fas fa-th"></i> Todos
@@ -1123,7 +1166,7 @@
                         <i class="fas fa-tools"></i> Herramientas
                     </div>
                 </div>
-                
+
                 <div class="product-counter" id="productCounter">
                     Cargando productos...
                 </div>
@@ -1142,7 +1185,8 @@
                     <a href="#" class="footer-link">Garantía</a>
                     <a href="#" class="footer-link">Contacto</a>
                 </div>
-                <p>© 2023 Catálogo Premium Pro - Todos los derechos reservados</p>
+                <!-- ✅ CAMBIO: Marca y año -->
+                <p>© 2026 CATÁLOGO SHOPNELSON - Todos los derechos reservados</p>
                 <p>Envíos a todo el país | Pagos seguros | Garantía de calidad | Soporte 24/7</p>
             </footer>
         </div>
@@ -1152,18 +1196,18 @@
             <button class="back-to-catalog" id="backToCatalog">
                 <i class="fas fa-arrow-left"></i> Volver al Catálogo
             </button>
-            
+
             <div class="landing-product-card">
                 <div class="landing-product-header">
                     <div class="landing-image-wrapper">
                         <img id="landingProductImage" src="" alt="" class="landing-image">
                     </div>
-                    
+
                     <div class="landing-info">
                         <h1 id="landingProductTitle"></h1>
                         <p class="landing-sku" id="landingProductSku"></p>
                         <div class="landing-price" id="landingProductPrice"></div>
-                        
+
                         <div style="margin-top: 20px;">
                             <button class="btn-whatsapp-pro" id="landingBuyButton">
                                 <i class="fab fa-whatsapp"></i>
@@ -1172,12 +1216,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="landing-description">
                     <h3><i class="fas fa-info-circle"></i> Descripción del Producto</h3>
                     <p id="landingProductDescription"></p>
                 </div>
-                
+
                 <div class="landing-features">
                     <h3><i class="fas fa-star"></i> Características Principales</h3>
                     <div class="features-grid" id="landingFeatures">
@@ -1196,7 +1240,7 @@
                 <h2><i class="fas fa-shopping-cart"></i> Completar Compra</h2>
                 <p>Complete el formulario para procesar su pedido por WhatsApp</p>
             </div>
-            
+
             <div class="modal-body">
                 <!-- Información del producto -->
                 <div class="form-section">
@@ -1205,7 +1249,7 @@
                         <!-- Se llenará con JavaScript -->
                     </div>
                 </div>
-                
+
                 <!-- Información del cliente -->
                 <div class="form-section">
                     <h3><i class="fas fa-user"></i> Información Personal</h3>
@@ -1214,14 +1258,14 @@
                             <label for="customerName">Nombre completo *</label>
                             <input type="text" id="customerName" class="form-control-elegant" placeholder="Ingresa tu nombre completo" required>
                         </div>
-                        
+
                         <div class="form-group-elegant">
                             <label for="customerPhone">Teléfono *</label>
                             <input type="tel" id="customerPhone" class="form-control-elegant" placeholder="Ej: 0981 123456" required>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Dirección de entrega -->
                 <div class="form-section">
                     <h3><i class="fas fa-map-marker-alt"></i> Dirección de Entrega</h3>
@@ -1230,24 +1274,24 @@
                             <label for="customerCity">Ciudad *</label>
                             <input type="text" id="customerCity" class="form-control-elegant" placeholder="Ej: Asunción" required>
                         </div>
-                        
+
                         <div class="form-group-elegant">
                             <label for="customerDistrict">Barrio/Departamento *</label>
                             <input type="text" id="customerDistrict" class="form-control-elegant" placeholder="Ej: Sajonia" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group-elegant">
                         <label for="customerAddress">Dirección completa *</label>
                         <input type="text" id="customerAddress" class="form-control-elegant" placeholder="Calle, número, entre calles" required>
                     </div>
-                    
+
                     <div class="form-group-elegant">
                         <label for="customerReference">Puntos de referencia</label>
                         <textarea id="customerReference" class="form-control-elegant" placeholder="Cerca de... o puntos de referencia para facilitar la entrega"></textarea>
                     </div>
                 </div>
-                
+
                 <!-- Opciones adicionales -->
                 <div class="form-section">
                     <h3><i class="fas fa-cogs"></i> Opciones Adicionales</h3>
@@ -1259,7 +1303,7 @@
                                 <option value="express">Envío rápido (24-48 horas) - 8.000 Gs</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group-elegant">
                             <label for="quantity">Cantidad</label>
                             <div class="quantity-selector" style="display: flex; align-items: center; gap: 15px;">
@@ -1269,7 +1313,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Para plantillas: selector de calce -->
                     <div id="sizeSection" style="display: none; margin-top: 20px;">
                         <label style="display: block; margin-bottom: 10px; font-weight: 600;">Selecciona tu calce:</label>
@@ -1278,7 +1322,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Resumen de compra -->
                 <div class="order-summary-elegant">
                     <h3 style="margin-bottom: 20px; color: var(--primary);">Resumen de Compra</h3>
@@ -1295,7 +1339,7 @@
                         <span id="totalAmount">0 Gs</span>
                     </div>
                 </div>
-                
+
                 <!-- BOTÓN DE WHATSAPP GIGANTE PARA EL FORMULARIO -->
                 <button class="btn-whatsapp-giant" id="whatsappButton">
                     <i class="fab fa-whatsapp"></i>
@@ -1751,6 +1795,24 @@
                 ]
             },
             {
+                title: "TABLA DE PICAR DE MÁRMOL PREMIUM (Beige y Negro)",
+                sku: "TABLA DE PICAR DE MÁRMOL PREMIUM (Beige y Negro) - 039",
+                price: 169900,
+                image_url: "https://cdn.shopify.com/s/files/1/0707/1979/9484/files/WhatsApp_Image_2026-02-03_at_1.41.40_AM.jpg?v=1770094067",
+                isPlantilla: false,
+                category: "hogar",
+                description: "Tabla de picar de mármol premium diseñada para una cocina elegante y funcional. Superficie sólida, resistente y fácil de limpiar, ideal para cortar, servir y presentar alimentos. Disponible exclusivamente en color Beige y Negro.",
+                features: [
+                    "Fabricada en mármol premium de alta calidad",
+                    "Disponible solo en color Beige y Negro",
+                    "Superficie resistente a cortes y rayaduras",
+                    "No absorbe olores ni líquidos",
+                    "Fácil limpieza e higiene superior",
+                    "Ideal para picar, servir y presentación gourmet",
+                    "Diseño elegante que realza cualquier cocina"
+                ]
+            },
+            {
                 title: "🔵✅Tapas de Silicona 6 en 1",
                 sku: "🔵✅Tapas de Silicona 6 en 1-",
                 price: 129900,
@@ -2009,7 +2071,7 @@
                 title: "ASAD LATTAFA - MASCULINO",
                 sku: "ASAD LATTAFA 02",
                 price: 219900,
-                image_url: "https://cdn.shopify.com/s/files/1/0707/1979/9484/files/Captura_de_pantalla_2026-02-03_233738.jpg?v=1770172708",          
+                image_url: "https://cdn.shopify.com/s/files/1/0707/1979/9484/files/Captura_de_pantalla_2026-02-03_233738.jpg?v=1770172708",
                 isPlantilla: false,
                 category: "hogar",
                 description: "Perfume masculino Asad de la prestigiosa casa Lattafa. Fragancia oriental amaderada con notas de azafrán, ámbar y cuero.",
@@ -2142,51 +2204,51 @@
             const grid = document.getElementById('productsGrid');
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const activeFilter = document.querySelector('.filter-chip.active').dataset.filter;
-            
+
             grid.innerHTML = '';
-            
+
             let filteredProducts = products.filter(product => {
-                const matchesSearch = !searchTerm || 
+                const matchesSearch = !searchTerm ||
                     product.title.toLowerCase().includes(searchTerm) ||
                     product.sku.toLowerCase().includes(searchTerm) ||
                     product.description.toLowerCase().includes(searchTerm);
-                
+
                 const matchesFilter = activeFilter === 'all' || product.category === activeFilter;
-                
+
                 return matchesSearch && matchesFilter;
             });
-            
+
             // Actualizar contador
-            document.getElementById('productCounter').textContent = 
+            document.getElementById('productCounter').textContent =
                 `Mostrando ${filteredProducts.length} de ${products.length} productos`;
-            
+
             // Crear tarjetas
             filteredProducts.forEach((product, index) => {
                 const card = document.createElement('div');
                 card.className = 'product-card-elegant';
-                
+
                 card.innerHTML = `
                     <button class="share-btn-elegant" onclick="shareProduct(${index})">
                         <i class="fas fa-share-alt"></i>
                     </button>
-                    
+
                     <div class="product-badges">
-                        ${product.isPlantilla ? 
-                            `<div class="badge badge-accent">PLANTILLA</div>` : 
+                        ${product.isPlantilla ?
+                            `<div class="badge badge-accent">PLANTILLA</div>` :
                             `<div class="badge badge-primary">${product.category.toUpperCase()}</div>`
                         }
                     </div>
-                    
+
                     <div class="product-image-container">
-                        <img src="${product.image_url}" alt="${product.title}" class="product-image" 
+                        <img src="${product.image_url}" alt="${product.title}" class="product-image"
                              onerror="this.src='https://via.placeholder.com/400x300?text=Producto'">
                     </div>
-                    
+
                     <div class="product-info-elegant">
                         <h3 class="product-title">${product.title}</h3>
                         <p class="product-sku">${product.sku}</p>
                         <div class="product-price">${formatPrice(product.price)}</div>
-                        
+
                         <div style="margin-top: 10px;">
                             <button class="btn-view-details" onclick="viewProduct(${index})">
                                 <i class="fas fa-eye"></i> Ver Detalles
@@ -2197,7 +2259,7 @@
                         </div>
                     </div>
                 `;
-                
+
                 grid.appendChild(card);
             });
         }
@@ -2205,14 +2267,14 @@
         // Ver producto
         function viewProduct(index) {
             currentProduct = products[index];
-            
+
             // Actualizar landing page
             document.getElementById('landingProductImage').src = currentProduct.image_url;
             document.getElementById('landingProductTitle').textContent = currentProduct.title;
             document.getElementById('landingProductSku').textContent = currentProduct.sku;
             document.getElementById('landingProductPrice').textContent = formatPrice(currentProduct.price);
             document.getElementById('landingProductDescription').textContent = currentProduct.description;
-            
+
             // Cargar características
             const featuresGrid = document.getElementById('landingFeatures');
             featuresGrid.innerHTML = '';
@@ -2225,7 +2287,7 @@
                 `;
                 featuresGrid.appendChild(featureCard);
             });
-            
+
             // Mostrar landing page
             document.getElementById('mainCatalog').style.display = 'none';
             document.getElementById('productLanding').classList.add('active');
@@ -2235,12 +2297,16 @@
         function buyProduct(index) {
             currentProduct = products[index];
             quantity = 1;
-            
+
+            // Reset tamaño
+            selectedSize = null;
+            document.getElementById('quantityDisplay').textContent = quantity;
+
             // Actualizar información en el modal
             const modalInfo = document.getElementById('modalProductInfo');
             modalInfo.innerHTML = `
                 <div style="display: flex; gap: 20px; align-items: center;">
-                    <img src="${currentProduct.image_url}" alt="${currentProduct.title}" 
+                    <img src="${currentProduct.image_url}" alt="${currentProduct.title}"
                          style="width: 100px; height: 100px; object-fit: contain; border-radius: 10px; background: #f8f9fa; padding: 10px;">
                     <div>
                         <h4 style="margin-bottom: 5px; color: var(--primary);">${currentProduct.title}</h4>
@@ -2251,15 +2317,15 @@
                     </div>
                 </div>
             `;
-            
+
             // Mostrar selector de calce si es plantilla
             const sizeSection = document.getElementById('sizeSection');
             const sizeOptions = document.getElementById('sizeOptions');
-            
+
             if (currentProduct.isPlantilla) {
                 sizeSection.style.display = 'block';
                 sizeOptions.innerHTML = '';
-                
+
                 for (let i = 35; i <= 45; i++) {
                     const sizeOption = document.createElement('div');
                     sizeOption.className = 'size-option-elegant';
@@ -2276,10 +2342,10 @@
             } else {
                 sizeSection.style.display = 'none';
             }
-            
+
             // Actualizar resumen
             updateOrderSummary();
-            
+
             // Mostrar modal
             document.getElementById('purchaseModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -2288,12 +2354,12 @@
         // Actualizar resumen de compra
         function updateOrderSummary() {
             if (!currentProduct) return;
-            
+
             const subtotal = currentProduct.price * quantity;
             const shippingMethod = document.getElementById('shippingMethod').value;
             const shippingCost = shippingMethod === 'express' ? 8000 : 0;
             const total = subtotal + shippingCost;
-            
+
             document.getElementById('subtotalAmount').textContent = formatPrice(subtotal);
             document.getElementById('shippingAmount').textContent = shippingMethod === 'express' ? '8.000 Gs' : 'Gratis';
             document.getElementById('totalAmount').textContent = formatPrice(total);
@@ -2302,11 +2368,11 @@
         // Enviar pedido por WhatsApp
         function sendWhatsAppOrder() {
             if (!currentProduct) return;
-            
+
             // Validar campos
             const requiredFields = ['customerName', 'customerPhone', 'customerCity', 'customerAddress'];
             let isValid = true;
-            
+
             requiredFields.forEach(fieldId => {
                 const field = document.getElementById(fieldId);
                 if (!field.value.trim()) {
@@ -2316,18 +2382,18 @@
                     field.classList.remove('error');
                 }
             });
-            
+
             if (!isValid) {
                 alert('Por favor, complete todos los campos obligatorios.');
                 return;
             }
-            
+
             // Si es plantilla y no seleccionó calce
             if (currentProduct.isPlantilla && !selectedSize) {
                 alert('Por favor, seleccione un calce para la plantilla.');
                 return;
             }
-            
+
             // Preparar mensaje
             const customerName = document.getElementById('customerName').value;
             const customerPhone = document.getElementById('customerPhone').value;
@@ -2336,53 +2402,53 @@
             const customerAddress = document.getElementById('customerAddress').value;
             const customerReference = document.getElementById('customerReference').value;
             const shippingMethod = document.getElementById('shippingMethod').value;
-            
+
             const subtotal = currentProduct.price * quantity;
             const shippingCost = shippingMethod === 'express' ? 8000 : 0;
             const total = subtotal + shippingCost;
-            
-            let message = `🚀 *NUEVO PEDIDO - Catálogo Premium Pro*\n\n`;
+
+            let message = `🚀 *NUEVO PEDIDO - SHOPNELSON*\n\n`;
             message += `📦 *Producto:* ${currentProduct.title}\n`;
             message += `📋 *SKU:* ${currentProduct.sku}\n`;
-            
+
             if (currentProduct.isPlantilla) {
                 message += `👟 *Calce:* ${selectedSize}\n`;
             }
-            
+
             message += `💰 *Precio unitario:* ${formatPrice(currentProduct.price)}\n`;
             message += `📦 *Cantidad:* ${quantity}\n`;
             message += `🧾 *Subtotal:* ${formatPrice(subtotal)}\n`;
             message += `🚚 *Envío:* ${shippingMethod === 'express' ? 'RÁPIDO (24-48h)' : 'ESTÁNDAR (3-5 días)'} - ${shippingMethod === 'express' ? '8.000 Gs' : 'Gratis'}\n`;
             message += `💵 *TOTAL:* ${formatPrice(total)}\n\n`;
-            
+
             message += `👤 *Información del cliente:*\n`;
             message += `   • Nombre: ${customerName}\n`;
             message += `   • Teléfono: ${customerPhone}\n`;
             message += `   • Ciudad: ${customerCity}\n`;
             message += `   • Barrio/Depto: ${customerDistrict}\n`;
             message += `   • Dirección: ${customerAddress}\n`;
-            
+
             if (customerReference) {
                 message += `   • Referencia: ${customerReference}\n`;
             }
-            
+
             message += `\n⏰ *Fecha:* ${new Date().toLocaleDateString('es-PY')}\n`;
             message += `🆔 *ID Pedido:* ${Date.now()}`;
-            
+
             // Número de WhatsApp
             const phoneNumber = "595994615064";
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
+
             // Abrir WhatsApp
             window.open(whatsappURL, '_blank');
-            
+
             // Añadir al carrito
             addToCart();
-            
+
             // Cerrar modal
             closeModal();
-            
+
             // Limpiar formulario
             document.getElementById('customerName').value = '';
             document.getElementById('customerPhone').value = '';
@@ -2390,7 +2456,7 @@
             document.getElementById('customerDistrict').value = '';
             document.getElementById('customerAddress').value = '';
             document.getElementById('customerReference').value = '';
-            
+
             // Mostrar confirmación
             setTimeout(() => {
                 alert('✅ Pedido enviado con éxito! Revisa WhatsApp para completar la compra.');
@@ -2404,7 +2470,7 @@
                 quantity: quantity,
                 size: selectedSize
             });
-            
+
             document.getElementById('cartCount').textContent = cart.length;
         }
 
@@ -2418,7 +2484,7 @@
         function shareProduct(index) {
             const product = products[index];
             const url = window.location.origin + window.location.pathname + '?product=' + index;
-            
+
             if (navigator.share) {
                 navigator.share({
                     title: product.title,
@@ -2436,10 +2502,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Cargar productos
             loadProducts();
-            
+
             // Event listeners
             document.getElementById('searchInput').addEventListener('input', loadProducts);
-            
+
             document.querySelectorAll('.filter-chip').forEach(chip => {
                 chip.addEventListener('click', function() {
                     document.querySelectorAll('.filter-chip').forEach(c => {
@@ -2449,25 +2515,25 @@
                     loadProducts();
                 });
             });
-            
+
             document.getElementById('backToCatalog').addEventListener('click', function() {
                 document.getElementById('mainCatalog').style.display = 'block';
                 document.getElementById('productLanding').classList.remove('active');
             });
-            
+
             document.getElementById('closeModal').addEventListener('click', closeModal);
-            
+
             document.getElementById('purchaseModal').addEventListener('click', function(e) {
                 if (e.target === this) closeModal();
             });
-            
+
             // Controles de cantidad
             document.getElementById('increaseQty').addEventListener('click', function() {
                 quantity++;
                 document.getElementById('quantityDisplay').textContent = quantity;
                 updateOrderSummary();
             });
-            
+
             document.getElementById('decreaseQty').addEventListener('click', function() {
                 if (quantity > 1) {
                     quantity--;
@@ -2475,13 +2541,13 @@
                     updateOrderSummary();
                 }
             });
-            
+
             // Método de envío
             document.getElementById('shippingMethod').addEventListener('change', updateOrderSummary);
-            
+
             // Botón de WhatsApp en formulario
             document.getElementById('whatsappButton').addEventListener('click', sendWhatsAppOrder);
-            
+
             // Botón de compra en landing
             document.getElementById('landingBuyButton').addEventListener('click', function() {
                 const currentIndex = products.indexOf(currentProduct);
@@ -2489,27 +2555,27 @@
                     buyProduct(currentIndex);
                 }
             });
-            
+
             // Carrito
             document.getElementById('cartButton').addEventListener('click', function() {
                 if (cart.length > 0) {
-                    alert(`🛒 Carrito:\n\n${cart.map(item => 
+                    alert(`🛒 Carrito:\n\n${cart.map(item =>
                         `${item.product.title} x${item.quantity} - ${formatPrice(item.product.price * item.quantity)}`
                     ).join('\n')}`);
                 } else {
                     alert('Tu carrito está vacío 🛒');
                 }
             });
-            
+
             // Validar campo de teléfono
             document.getElementById('customerPhone').addEventListener('input', function(e) {
                 this.value = this.value.replace(/[^\d\s]/g, '');
             });
-            
+
             // Verificar si hay producto en la URL
             const urlParams = new URLSearchParams(window.location.search);
             const productIndex = urlParams.get('product');
-            
+
             if (productIndex !== null) {
                 const index = parseInt(productIndex);
                 if (index >= 0 && index < products.length) {
